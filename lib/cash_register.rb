@@ -8,6 +8,9 @@ class CashRegister
   def initialize(amount = nil)
     @total = 0
     @discount = amount
+    if amount != nil
+      @discount = amount
+    end
     @items = []
   end
 
@@ -21,8 +24,8 @@ class CashRegister
   end
 
   def apply_discount
-    puts "#{@discount}"
-    if @discount
+    puts "discount : #{discount}"
+    if @discount > 0
       @total = @total * (1.0 - (0.01 * @discount))
       "After the discount, the total comes to $#{@total}."
     elsif
