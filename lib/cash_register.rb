@@ -24,6 +24,7 @@ class CashRegister
       i += 1
       @items << name
     end
+    @voidAmount = (cost * qty)
   end
 
   def apply_discount
@@ -37,6 +38,7 @@ class CashRegister
     end
   end
 
-  def void_last_transaction()
-
+  def void_last_transaction
+    @total = @total - @voidAmount  
+  end
 end
