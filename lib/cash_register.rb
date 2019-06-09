@@ -18,7 +18,7 @@ class CashRegister
     @total = @total + (cost * qty)
     i = 0
     while i < qty
-      i =+ 1
+      i += 1
       @items << name
     end
   end
