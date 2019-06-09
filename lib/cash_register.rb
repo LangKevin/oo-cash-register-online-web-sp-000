@@ -2,6 +2,7 @@ require 'pry'
 class CashRegister
 
   attr_accessor :total, :discount, :items
+   
   def self.items
     @items
   end
@@ -13,6 +14,7 @@ class CashRegister
     #   @discount = amount
     # end
     @items = []
+    @voidAmount = 0
   end
 
   def add_item(name, cost, qty = 1)
@@ -34,5 +36,7 @@ class CashRegister
       "There is no discount to apply."
     end
   end
+
+  def void_last_transaction()
 
 end
