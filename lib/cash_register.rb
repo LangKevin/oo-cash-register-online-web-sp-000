@@ -1,6 +1,6 @@
 class CashRegister
 
-  attr_accessor :total, :discount
+  attr_accessor :total, :discount, :items
   def self.items
     @items
   end
@@ -22,4 +22,10 @@ class CashRegister
       @items << name
     end
   end
+
+  def apply_discount
+    if @discount > 0
+      @total = @total * (0.01 * @discount)
+    end
+  end  
 end
