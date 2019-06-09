@@ -30,7 +30,7 @@ class CashRegister
     if @discount != nil
       @total = @total * (1.0 - (0.01 * @discount))
       "After the discount, the total comes to $#{@total}."
-    elsif
+    else
       "There is no discount to apply."
     end
   end
