@@ -27,5 +27,5 @@ class CashRegister
     if @discount > 0
       @total = @total * (0.01 * @discount)
     end
-  end  
+  end
 end
